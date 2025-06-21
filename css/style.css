@@ -345,7 +345,7 @@ header p {
 .question-section {
     background: rgba(255,255,255,0.95);
     border-radius: 20px;
-    padding: 30px;
+    padding: 40px 30px 30px 30px;
     margin-bottom: 30px;
     box-shadow: 0 6px 12px rgba(0,0,0,0.1);
     text-align: center;
@@ -365,6 +365,49 @@ header p {
     color: #FF6B6B;
     font-weight: bold;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* ふりがな表示用スタイル */
+.furigana-container {
+    display: inline-block;
+    position: relative;
+    margin: 0 2px;
+}
+
+.furigana {
+    font-size: 0.6em;
+    line-height: 1;
+    position: absolute;
+    top: -1.2em;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #666;
+    font-weight: normal;
+    white-space: nowrap;
+    z-index: 1;
+}
+
+.kanji-with-furigana {
+    display: inline-block;
+    position: relative;
+    padding-top: 0.8em;
+}
+
+/* 対象漢字（問題の漢字）のふりがなは非表示 */
+.target-kanji .furigana {
+    display: none;
+}
+
+/* モバイル対応 */
+@media (max-width: 768px) {
+    .furigana {
+        font-size: 0.5em;
+        top: -1em;
+    }
+    
+    .kanji-with-furigana {
+        padding-top: 0.6em;
+    }
 }
 
 /* 選択肢 */

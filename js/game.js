@@ -65,10 +65,40 @@ class GameManager {
         return this.currentQuestionSet[this.currentQuestionIndex];
     }
     
-    // 問題文をフォーマット（漢字をハイライト）
+    // 問題文をフォーマット（漢字をハイライト、ふりがな付き）
     formatQuestionText(sentence, targetKanji) {
-        return sentence.replace(`{${targetKanji}}`, 
-            `<span class="highlight-kanji">${targetKanji}</span>`);
+        // ふりがな付き漢字を処理
+        let formattedText = sentence;
+        
+        // {漢字|ふりがな} 形式を処理
+        formattedText = formattedText.replace(/\{([^|{}]+)\|([^}]+)\}/g, (match, kanji, furigana) => {
+            if (kanji === targetKanji) {
+                // 対象漢字の場合：ハイライト表示、ふりがなは非表示
+                return `<span class="furigana-container target-kanji">
+                    <span class="furigana">${furigana}</span>
+                    <span class="highlight-kanji kanji-with-furigana">${kanji}</span>
+                </span>`;
+            } else {
+                // その他の漢字：ふりがな表示
+                return `<span class="furigana-container">
+                    <span class="furigana">${furigana}</span>
+                    <span class="kanji-with-furigana">${kanji}</span>
+                </span>`;
+            }
+        });
+        
+        // {漢字} 形式（ふりがななし）を処理
+        formattedText = formattedText.replace(/\{([^|{}]+)\}/g, (match, kanji) => {
+            if (kanji === targetKanji) {
+                // 対象漢字の場合：ハイライト表示
+                return `<span class="highlight-kanji">${kanji}</span>`;
+            } else {
+                // その他の漢字：通常表示
+                return kanji;
+            }
+        });
+        
+        return formattedText;
     }
     
     // 問題を表示
