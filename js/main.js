@@ -73,7 +73,21 @@ class App {
         
         // たまごの状態を更新
         const eggElement = document.querySelector('.egg-inner');
-        eggElement.textContent = eggState.emoji;
+        
+        // 進捗に応じて表示を変更
+        if (eggState.progress > 90 && eggState.nextDragon) {
+            // 90%以上で次のドラゴンのプレビューを表示
+            eggElement.innerHTML = `<img src="${eggState.nextDragon.image}" alt="${eggState.nextDragon.name}" class="dragon-image" style="opacity: 0.8; filter: brightness(1.2);">`;
+        } else if (eggState.progress > 75) {
+            // 75%以上でひび割れ演出
+            eggElement.innerHTML = '🐣';
+        } else if (eggState.progress > 50) {
+            // 50%以上でたまごが動く
+            eggElement.innerHTML = '🥚';
+        } else {
+            // 通常のたまご
+            eggElement.innerHTML = '🥚';
+        }
         
         // たまごの進捗に応じてアニメーション
         const egg = document.getElementById('dragon-egg');
@@ -116,7 +130,14 @@ class App {
         dragons.forEach(dragon => {
             const thumbnail = document.createElement('div');
             thumbnail.className = 'dragon-thumbnail';
-            thumbnail.innerHTML = dragon.displayEmoji;
+            
+            // 画像がある場合は画像を表示、ない場合は絵文字を表示
+            if (dragon.image) {
+                thumbnail.innerHTML = `<img src="${dragon.image}" alt="${dragon.displayName}" class="dragon-image">`;
+            } else {
+                thumbnail.innerHTML = dragon.displayEmoji;
+            }
+            
             thumbnail.style.background = `linear-gradient(45deg, ${dragon.color}55, ${dragon.color}88)`;
             thumbnail.title = dragon.displayName;
             
@@ -142,8 +163,16 @@ class App {
         if (!dragon) return;
         
         // モーダルに情報を設定
-        document.getElementById('modal-dragon-avatar').textContent = dragon.emoji;
-        document.getElementById('modal-dragon-avatar').style.color = dragon.color;
+        const avatarElement = document.getElementById('modal-dragon-avatar');
+        
+        // 画像がある場合は画像を表示、ない場合は絵文字を表示
+        if (dragon.image) {
+            avatarElement.innerHTML = `<img src="${dragon.image}" alt="${dragon.name}" class="dragon-image-large">`;
+        } else {
+            avatarElement.textContent = dragon.emoji;
+            avatarElement.style.color = dragon.color;
+        }
+        
         document.getElementById('modal-dragon-name').textContent = dragon.name;
         document.getElementById('modal-dragon-birth').textContent = dragon.unlockDate;
         document.getElementById('modal-dragon-happiness').textContent = dragon.happiness;
@@ -376,10 +405,19 @@ class App {
             left: 50%;
             transform: translate(-50%, -50%);
             z-index: 3000;
-            font-size: 8em;
-            animation: dragonBirth 3s ease-out forwards;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         `;
-        birthContainer.textContent = dragon.emoji;
+        
+        // 画像がある場合は画像を表示、ない場合は絵文字を表示
+        if (dragon.image) {
+            birthContainer.innerHTML = `<img src="${dragon.image}" alt="${dragon.name}" class="dragon-birth-image">`;
+        } else {
+            birthContainer.style.fontSize = '8em';
+            birthContainer.textContent = dragon.emoji;
+            birthContainer.style.animation = 'dragonBirth 3s ease-out forwards';
+        }
         
         document.body.appendChild(birthContainer);
         

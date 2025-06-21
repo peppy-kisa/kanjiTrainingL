@@ -2,16 +2,16 @@
 class CharacterManager {
     constructor() {
         this.dragonTypes = [
-            { id: 1, name: 'ひりゅう', emoji: '🐉', color: '#FF6B6B', unlockScore: 50 },
-            { id: 2, name: 'みずりゅう', emoji: '🐲', color: '#4ECDC4', unlockScore: 100 },
-            { id: 3, name: 'かりゅう', emoji: '🔥', color: '#FF8E53', unlockScore: 150 },
-            { id: 4, name: 'でんりゅう', emoji: '⚡', color: '#FFD93D', unlockScore: 200 },
-            { id: 5, name: 'こおりりゅう', emoji: '❄️', color: '#6BCF7F', unlockScore: 250 },
-            { id: 6, name: 'きんりゅう', emoji: '✨', color: '#FFD700', unlockScore: 300 },
-            { id: 7, name: 'やみりゅう', emoji: '🌙', color: '#9B59B6', unlockScore: 350 },
-            { id: 8, name: 'ひかりりゅう', emoji: '🌟', color: '#F39C12', unlockScore: 400 },
-            { id: 9, name: 'じりゅう', emoji: '🌍', color: '#8B4513', unlockScore: 450 },
-            { id: 10, name: 'てんりゅう', emoji: '🌈', color: '#E91E63', unlockScore: 500 }
+            { id: 1, name: 'ひりゅう', emoji: '🐉', color: '#FF6B6B', unlockScore: 50, image: 'images/dragons/dragon1.png' },
+            { id: 2, name: 'みずりゅう', emoji: '🐲', color: '#4ECDC4', unlockScore: 100, image: 'images/dragons/dragon2.png' },
+            { id: 3, name: 'かりゅう', emoji: '🔥', color: '#FF8E53', unlockScore: 150, image: 'images/dragons/dragon3.png' },
+            { id: 4, name: 'でんりゅう', emoji: '⚡', color: '#FFD93D', unlockScore: 200, image: 'images/dragons/dragon4.png' },
+            { id: 5, name: 'こおりりゅう', emoji: '❄️', color: '#6BCF7F', unlockScore: 250, image: 'images/dragons/dragon5.png' },
+            { id: 6, name: 'きんりゅう', emoji: '✨', color: '#FFD700', unlockScore: 300, image: 'images/dragons/dragon6.png' },
+            { id: 7, name: 'やみりゅう', emoji: '🌙', color: '#9B59B6', unlockScore: 350, image: 'images/dragons/dragon1.png' },
+            { id: 8, name: 'ひかりりゅう', emoji: '🌟', color: '#F39C12', unlockScore: 400, image: 'images/dragons/dragon2.png' },
+            { id: 9, name: 'じりゅう', emoji: '🌍', color: '#8B4513', unlockScore: 450, image: 'images/dragons/dragon3.png' },
+            { id: 10, name: 'てんりゅう', emoji: '🌈', color: '#E91E63', unlockScore: 500, image: 'images/dragons/dragon4.png' }
         ];
         
         this.eggStages = [
@@ -56,6 +56,7 @@ class CharacterManager {
             name: dragonType.name,
             emoji: dragonType.emoji,
             color: dragonType.color,
+            image: dragonType.image,
             unlockDate: new Date().toISOString(),
             level: 1,
             happiness: 100
