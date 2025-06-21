@@ -161,6 +161,9 @@ class App {
     
     // ゲーム開始
     startGame() {
+        // ゲーム開始前にメインページの状態を更新
+        this.updateMainPage();
+        
         const questionSet = gameManager.startGame();
         if (!questionSet || questionSet.length === 0) {
             alert('問題データの読み込み中です。少しお待ちください。');
@@ -272,6 +275,9 @@ class App {
     // ゲーム終了
     endGame() {
         const result = gameManager.endGame();
+        
+        // メインページの状態を更新（累計正解数など）
+        this.updateMainPage();
         
         // 結果を表示
         document.getElementById('result-score-num').textContent = result.correctAnswers;
