@@ -305,19 +305,24 @@ class App {
     endGame() {
         const result = gameManager.endGame();
         
-        // メインページの状態を更新（累計正解数など）
-        this.updateMainPage();
-        
         // 結果を表示
         document.getElementById('result-score-num').textContent = result.correctAnswers;
         document.getElementById('result-total-score').textContent = result.newTotalScore;
         
         // 新しいドラゴンが生まれた場合の特別演出
         if (result.newDragons && result.newDragons.length > 0) {
-            this.showDragonBirthEffect(result.newDragons);
+            // 結果画面を表示してから少し待ってからドラゴン誕生演出
+            this.showResultPage();
+            setTimeout(() => {
+                this.showDragonBirthEffect(result.newDragons);
+            }, 1000);
+        } else {
+            // ドラゴン誕生がない場合は通常の結果画面
+            this.showResultPage();
         }
         
-        this.showResultPage();
+        // メインページの状態を更新（累計正解数など）
+        this.updateMainPage();
     }
     
     // 正解エフェクト
@@ -378,25 +383,49 @@ class App {
     
     // ドラゴン誕生エフェクト
     showDragonBirthEffect(newDragons) {
+        // まず大きなお祝いメッセージを表示
+        const celebrationMessage = `🎊 あたらしい ともだちが うまれたよ！ 🎊`;
+        this.showEffect(celebrationMessage, 'birth');
+        this.createCelebrationParticles();
+        
         newDragons.forEach((dragon, index) => {
             setTimeout(() => {
                 // 特別な誕生エフェクト
                 this.createDragonBirthAnimation(dragon);
                 
-                const message = `🎉 ${dragon.name}がうまれました！ 🎉`;
+                const message = `🌟 ${dragon.name}が なかまに なったよ！ 🌟`;
                 this.showEffect(message, 'birth');
                 this.createCelebrationParticles();
+                
+                // ドラゴン誕生音を再生（将来実装）
+                if (window.playSound) {
+                    window.playSound('dragon-birth');
+                }
                 
                 // 誕生後にメインページを更新
                 setTimeout(() => {
                     this.updateMainPage();
-                }, 2000);
-            }, index * 1500);
+                }, 3000);
+            }, index * 2000 + 2000); // 最初のメッセージの後、2秒間隔で表示
         });
     }
     
     // ドラゴン誕生アニメーション
     createDragonBirthAnimation(dragon) {
+        // 背景をちょっと暗くする
+        const backdrop = document.createElement('div');
+        backdrop.style.cssText = `
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.3);
+            z-index: 2999;
+            animation: fadeIn 0.5s ease;
+        `;
+        document.body.appendChild(backdrop);
+        
         const birthContainer = document.createElement('div');
         birthContainer.className = 'dragon-birth-container';
         birthContainer.style.cssText = `
@@ -406,44 +435,65 @@ class App {
             transform: translate(-50%, -50%);
             z-index: 3000;
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
+            background: radial-gradient(circle, rgba(255,215,0,0.3), rgba(255,192,203,0.3));
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 0 50px rgba(255,215,0,0.8);
         `;
         
         // 画像がある場合は画像を表示、ない場合は絵文字を表示
         if (dragon.image) {
-            birthContainer.innerHTML = `<img src="${dragon.image}" alt="${dragon.name}" class="dragon-birth-image">`;
+            birthContainer.innerHTML = `
+                <img src="${dragon.image}" alt="${dragon.name}" class="dragon-birth-image">
+                <div style="font-size: 2em; color: #FF6B6B; font-weight: bold; margin-top: 15px; text-shadow: 2px 2px 4px rgba(0,0,0,0.3);">
+                    ${dragon.name}
+                </div>
+            `;
         } else {
-            birthContainer.style.fontSize = '8em';
-            birthContainer.textContent = dragon.emoji;
-            birthContainer.style.animation = 'dragonBirth 3s ease-out forwards';
+            birthContainer.innerHTML = `
+                <div style="font-size: 8em; animation: dragonBirth 3s ease-out forwards;">
+                    ${dragon.emoji}
+                </div>
+                <div style="font-size: 2em; color: #FF6B6B; font-weight: bold; margin-top: 15px; text-shadow: 2px 2px 4px rgba(0,0,0,0.3);">
+                    ${dragon.name}
+                </div>
+            `;
         }
         
         document.body.appendChild(birthContainer);
         
-        // 3秒後に削除
+        // 5秒後に削除
         setTimeout(() => {
             if (birthContainer.parentNode) {
                 birthContainer.parentNode.removeChild(birthContainer);
             }
-        }, 3000);
+            if (backdrop.parentNode) {
+                backdrop.parentNode.removeChild(backdrop);
+            }
+        }, 5000);
     }
     
     // お祝いパーティクル
     createCelebrationParticles() {
         const particlesContainer = document.getElementById('particles');
-        const emojis = ['🎊', '🎉', '✨', '🌟', '💖', '🎈', '🌈'];
+        const emojis = ['🎊', '🎉', '✨', '🌟', '💖', '🎈', '🌈', '🎆', '🎇', '💫'];
         
-        for (let i = 0; i < 30; i++) {
+        // より多くのパーティクルを生成
+        for (let i = 0; i < 50; i++) {
             const particle = document.createElement('div');
             particle.className = 'celebration-particle';
             particle.style.cssText = `
                 position: absolute;
                 left: ${Math.random() * 100}%;
                 top: ${Math.random() * 100}%;
-                font-size: ${Math.random() * 2 + 1}em;
-                animation: celebrationFloat ${Math.random() * 2 + 3}s ease-out forwards;
-                animation-delay: ${Math.random() * 0.5}s;
+                font-size: ${Math.random() * 3 + 1}em;
+                animation: celebrationFloat ${Math.random() * 3 + 4}s ease-out forwards;
+                animation-delay: ${Math.random() * 1}s;
+                z-index: 2500;
+                pointer-events: none;
             `;
             particle.textContent = emojis[Math.floor(Math.random() * emojis.length)];
             
@@ -454,7 +504,46 @@ class App {
                 if (particle.parentNode) {
                     particle.parentNode.removeChild(particle);
                 }
-            }, 5000);
+            }, 7000);
+        }
+        
+        // 追加で花火のような演出
+        for (let i = 0; i < 10; i++) {
+            setTimeout(() => {
+                this.createFireworkParticle();
+            }, i * 200);
+        }
+    }
+    
+    // 花火パーティクル
+    createFireworkParticle() {
+        const particlesContainer = document.getElementById('particles');
+        const centerX = Math.random() * 80 + 10; // 10-90%の範囲
+        const centerY = Math.random() * 60 + 20; // 20-80%の範囲
+        
+        for (let i = 0; i < 8; i++) {
+            const particle = document.createElement('div');
+            particle.style.cssText = `
+                position: absolute;
+                left: ${centerX}%;
+                top: ${centerY}%;
+                width: 4px;
+                height: 4px;
+                background: hsl(${Math.random() * 360}, 100%, 50%);
+                border-radius: 50%;
+                animation: fireworkExplode 1.5s ease-out forwards;
+                transform: rotate(${i * 45}deg);
+                z-index: 2500;
+                pointer-events: none;
+            `;
+            
+            particlesContainer.appendChild(particle);
+            
+            setTimeout(() => {
+                if (particle.parentNode) {
+                    particle.parentNode.removeChild(particle);
+                }
+            }, 1500);
         }
     }
     
