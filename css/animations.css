@@ -1,0 +1,256 @@
+/* アニメーション定義 */
+
+/* 正解時のパルスアニメーション */
+@keyframes correctPulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* 不正解時のシェイクアニメーション */
+@keyframes incorrectShake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    10%, 30%, 50%, 70%, 90% {
+        transform: translateX(-5px);
+    }
+    20%, 40%, 60%, 80% {
+        transform: translateX(5px);
+    }
+}
+
+/* エフェクトメッセージのフェードイン・アウト */
+@keyframes messageEffect {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.5);
+    }
+    30% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1.2);
+    }
+    70% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.8);
+    }
+}
+
+/* パーティクルアニメーション */
+@keyframes particle {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-200px) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* たまごの鼓動アニメーション */
+@keyframes eggHeartbeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+/* ドラゴン誕生アニメーション */
+@keyframes dragonBirth {
+    0% {
+        transform: scale(0) rotate(-180deg);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.2) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1) rotate(0deg);
+        opacity: 1;
+    }
+}
+
+/* ページ遷移アニメーション */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+}
+
+/* 背景の雲アニメーション */
+@keyframes cloudFloat {
+    0% {
+        transform: translateX(-100px);
+    }
+    100% {
+        transform: translateX(calc(100vw + 100px));
+    }
+}
+
+/* 星のきらきらアニメーション */
+@keyframes starTwinkle {
+    0%, 100% {
+        opacity: 0.3;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+}
+
+/* ボタンのホバーエフェクト */
+@keyframes buttonGlow {
+    0% {
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+    100% {
+        box-shadow: 0 6px 20px rgba(255,107,107,0.4);
+    }
+}
+
+/* 使用クラス */
+.animate-heartbeat {
+    animation: eggHeartbeat 2s ease-in-out infinite;
+}
+
+.animate-birth {
+    animation: dragonBirth 1.5s ease-out forwards;
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+.animate-fade-out {
+    animation: fadeOut 0.5s ease-out forwards;
+}
+
+.show-message {
+    animation: messageEffect 2s ease-out forwards;
+}
+
+/* パーティクル要素 */
+.particle {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: #FFD700;
+    border-radius: 50%;
+    animation: particle 2s ease-out forwards;
+}
+
+.particle.star {
+    background: #FFD700;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+.particle.circle {
+    background: #FF69B4;
+}
+
+.particle.heart {
+    background: #FF1493;
+    transform: rotate(45deg);
+}
+
+.particle.heart::before,
+.particle.heart::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: #FF1493;
+    border-radius: 50%;
+}
+
+.particle.heart::before {
+    top: -5px;
+    left: 0;
+}
+
+.particle.heart::after {
+    top: 0;
+    left: -5px;
+}
+
+/* 背景装飾要素 */
+.cloud {
+    position: fixed;
+    background: rgba(255,255,255,0.6);
+    border-radius: 50px;
+    opacity: 0.7;
+    animation: cloudFloat 20s linear infinite;
+    z-index: -1;
+}
+
+.cloud::before,
+.cloud::after {
+    content: '';
+    position: absolute;
+    background: rgba(255,255,255,0.6);
+    border-radius: 50%;
+}
+
+.star {
+    position: fixed;
+    color: #FFD700;
+    animation: starTwinkle 3s ease-in-out infinite;
+    z-index: -1;
+}
+
+/* 特殊エフェクト */
+.celebration {
+    pointer-events: none;
+}
+
+.rainbow-text {
+    background: linear-gradient(45deg, #FF6B6B, #4ECDC4, #45B7D1, #96CEB4, #FFEAA7, #DDA0DD);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: rainbow 2s ease-in-out infinite;
+}
+
+@keyframes rainbow {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}

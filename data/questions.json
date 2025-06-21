@@ -1,0 +1,404 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "sentence": "今日は{学校}に行きます。",
+      "targetKanji": "学校",
+      "choices": ["がっこう", "がくこう", "まなびや", "けんがく"],
+      "correct": 0,
+      "level": 1
+    },
+    {
+      "id": 2,
+      "sentence": "お母さんと{買い物}をしました。",
+      "targetKanji": "買い物",
+      "choices": ["かいもの", "かいぶつ", "ばいもの", "こうもの"],
+      "correct": 0,
+      "level": 1
+    },
+    {
+      "id": 3,
+      "sentence": "{友達}と遊びました。",
+      "targetKanji": "友達",
+      "choices": ["ともだち", "ゆうたつ", "ともたち", "とものたち"],
+      "correct": 0,
+      "level": 1
+    },
+    {
+      "id": 4,
+      "sentence": "{先生}がお話をしました。",
+      "targetKanji": "先生",
+      "choices": ["せんせい", "せんじょう", "さきなま", "せんなま"],
+      "correct": 0,
+      "level": 1
+    },
+    {
+      "id": 5,
+      "sentence": "図書館で{本}を読みました。",
+      "targetKanji": "本",
+      "choices": ["ほん", "もと", "ぼん", "ほうん"],
+      "correct": 0,
+      "level": 1
+    },
+    {
+      "id": 6,
+      "sentence": "{家族}で旅行に行きました。",
+      "targetKanji": "家族",
+      "choices": ["かぞく", "いえぞく", "けぞく", "かそく"],
+      "correct": 0,
+      "level": 1
+    },
+    {
+      "id": 7,
+      "sentence": "{時間}がありません。",
+      "targetKanji": "時間",
+      "choices": ["じかん", "ときま", "じま", "しかん"],
+      "correct": 0,
+      "level": 1
+    },
+    {
+      "id": 8,
+      "sentence": "公園で{犬}を見ました。",
+      "targetKanji": "犬",
+      "choices": ["いぬ", "けん", "いの", "こん"],
+      "correct": 0,
+      "level": 1
+    },
+    {
+      "id": 9,
+      "sentence": "{今日}は晴れています。",
+      "targetKanji": "今日",
+      "choices": ["きょう", "こんにち", "いまひ", "きのう"],
+      "correct": 0,
+      "level": 1
+    },
+    {
+      "id": 10,
+      "sentence": "{水}を飲みました。",
+      "targetKanji": "水",
+      "choices": ["みず", "すい", "みづ", "しみず"],
+      "correct": 0,
+      "level": 1
+    },
+    {
+      "id": 11,
+      "sentence": "{電車}で駅に向かいます。",
+      "targetKanji": "電車",
+      "choices": ["でんしゃ", "でんくるま", "でんしゃー", "でんち"],
+      "correct": 0,
+      "level": 2
+    },
+    {
+      "id": 12,
+      "sentence": "{病院}で診察を受けました。",
+      "targetKanji": "病院",
+      "choices": ["びょういん", "びゅういん", "へいいん", "やまいいん"],
+      "correct": 0,
+      "level": 2
+    },
+    {
+      "id": 13,
+      "sentence": "{会社}で働いています。",
+      "targetKanji": "会社",
+      "choices": ["かいしゃ", "あいしゃ", "えしゃ", "かいじゃ"],
+      "correct": 0,
+      "level": 2
+    },
+    {
+      "id": 14,
+      "sentence": "{写真}を撮りました。",
+      "targetKanji": "写真",
+      "choices": ["しゃしん", "しゃじん", "うつしん", "しゃそう"],
+      "correct": 0,
+      "level": 2
+    },
+    {
+      "id": 15,
+      "sentence": "{料理}を作りました。",
+      "targetKanji": "料理",
+      "choices": ["りょうり", "ろうり", "りょうじ", "りようり"],
+      "correct": 0,
+      "level": 2
+    },
+    {
+      "id": 16,
+      "sentence": "{天気}が良いです。",
+      "targetKanji": "天気",
+      "choices": ["てんき", "あまき", "てんけ", "てんしき"],
+      "correct": 0,
+      "level": 2
+    },
+    {
+      "id": 17,
+      "sentence": "{音楽}を聞きました。",
+      "targetKanji": "音楽",
+      "choices": ["おんがく", "おとがく", "いんがく", "おんらく"],
+      "correct": 0,
+      "level": 2
+    },
+    {
+      "id": 18,
+      "sentence": "{新聞}を読みました。",
+      "targetKanji": "新聞",
+      "choices": ["しんぶん", "しんもん", "あたらしぶん", "しんふん"],
+      "correct": 0,
+      "level": 2
+    },
+    {
+      "id": 19,
+      "sentence": "{野菜}を食べました。",
+      "targetKanji": "野菜",
+      "choices": ["やさい", "のさい", "やちゃい", "のちゃい"],
+      "correct": 0,
+      "level": 2
+    },
+    {
+      "id": 20,
+      "sentence": "{自転車}で行きました。",
+      "targetKanji": "自転車",
+      "choices": ["じてんしゃ", "じでんしゃ", "しでんしゃ", "じてんくるま"],
+      "correct": 0,
+      "level": 2
+    },
+    {
+      "id": 21,
+      "sentence": "{映画}を見に行きました。",
+      "targetKanji": "映画",
+      "choices": ["えいが", "えが", "えいかく", "はえが"],
+      "correct": 0,
+      "level": 2
+    },
+    {
+      "id": 22,
+      "sentence": "{勉強}をしました。",
+      "targetKanji": "勉強",
+      "choices": ["べんきょう", "べんごう", "べんけう", "べんこう"],
+      "correct": 0,
+      "level": 2
+    },
+    {
+      "id": 23,
+      "sentence": "{手紙}を書きました。",
+      "targetKanji": "手紙",
+      "choices": ["てがみ", "てし", "しゅし", "てかみ"],
+      "correct": 0,
+      "level": 2
+    },
+    {
+      "id": 24,
+      "sentence": "{運動}をしました。",
+      "targetKanji": "運動",
+      "choices": ["うんどう", "うんとう", "はこどう", "うんどく"],
+      "correct": 0,
+      "level": 2
+    },
+    {
+      "id": 25,
+      "sentence": "{建物}が高いです。",
+      "targetKanji": "建物",
+      "choices": ["たてもの", "けんもの", "たてぶつ", "けんぶつ"],
+      "correct": 0,
+      "level": 2
+    },
+    {
+      "id": 26,
+      "sentence": "{春}になりました。",
+      "targetKanji": "春",
+      "choices": ["はる", "しゅん", "はるる", "しゅんじ"],
+      "correct": 0,
+      "level": 1
+    },
+    {
+      "id": 27,
+      "sentence": "{夏}は暑いです。",
+      "targetKanji": "夏",
+      "choices": ["なつ", "か", "げ", "あつ"],
+      "correct": 0,
+      "level": 1
+    },
+    {
+      "id": 28,
+      "sentence": "{秋}は涼しいです。",
+      "targetKanji": "秋",
+      "choices": ["あき", "しゅう", "あく", "しう"],
+      "correct": 0,
+      "level": 1
+    },
+    {
+      "id": 29,
+      "sentence": "{冬}は寒いです。",
+      "targetKanji": "冬",
+      "choices": ["ふゆ", "とう", "ふうゆ", "とうき"],
+      "correct": 0,
+      "level": 1
+    },
+    {
+      "id": 30,
+      "sentence": "{空}が青いです。",
+      "targetKanji": "空",
+      "choices": ["そら", "くう", "から", "そう"],
+      "correct": 0,
+      "level": 1
+    },
+    {
+      "id": 31,
+      "sentence": "{花}がきれいです。",
+      "targetKanji": "花",
+      "choices": ["はな", "か", "ばな", "はなー"],
+      "correct": 0,
+      "level": 1
+    },
+    {
+      "id": 32,
+      "sentence": "{山}に登りました。",
+      "targetKanji": "山",
+      "choices": ["やま", "さん", "やまー", "さんざん"],
+      "correct": 0,
+      "level": 1
+    },
+    {
+      "id": 33,
+      "sentence": "{海}で泳ぎました。",
+      "targetKanji": "海",
+      "choices": ["うみ", "かい", "うみー", "かいじ"],
+      "correct": 0,
+      "level": 1
+    },
+    {
+      "id": 34,
+      "sentence": "{川}で魚を見ました。",
+      "targetKanji": "川",
+      "choices": ["かわ", "がわ", "せん", "かわー"],
+      "correct": 0,
+      "level": 1
+    },
+    {
+      "id": 35,
+      "sentence": "{火}が燃えています。",
+      "targetKanji": "火",
+      "choices": ["ひ", "か", "び", "ふぁ"],
+      "correct": 0,
+      "level": 1
+    },
+    {
+      "id": 36,
+      "sentence": "{力}を合わせました。",
+      "targetKanji": "力",
+      "choices": ["ちから", "りょく", "りき", "ちからー"],
+      "correct": 0,
+      "level": 1
+    },
+    {
+      "id": 37,
+      "sentence": "{心}が温かいです。",
+      "targetKanji": "心",
+      "choices": ["こころ", "しん", "こころー", "しんしん"],
+      "correct": 0,
+      "level": 1
+    },
+    {
+      "id": 38,
+      "sentence": "{体}が元気です。",
+      "targetKanji": "体",
+      "choices": ["からだ", "たい", "からだー", "たいたい"],
+      "correct": 0,
+      "level": 1
+    },
+    {
+      "id": 39,
+      "sentence": "{頭}が痛いです。",
+      "targetKanji": "頭",
+      "choices": ["あたま", "とう", "あたまー", "とうとう"],
+      "correct": 0,
+      "level": 1
+    },
+    {
+      "id": 40,
+      "sentence": "{手}を洗いました。",
+      "targetKanji": "手",
+      "choices": ["て", "しゅ", "てー", "しゅしゅ"],
+      "correct": 0,
+      "level": 1
+    },
+    {
+      "id": 41,
+      "sentence": "{足}が疲れました。",
+      "targetKanji": "足",
+      "choices": ["あし", "そく", "あしー", "そくそく"],
+      "correct": 0,
+      "level": 1
+    },
+    {
+      "id": 42,
+      "sentence": "{目}で見ました。",
+      "targetKanji": "目",
+      "choices": ["め", "もく", "めー", "もくもく"],
+      "correct": 0,
+      "level": 1
+    },
+    {
+      "id": 43,
+      "sentence": "{耳}で聞きました。",
+      "targetKanji": "耳",
+      "choices": ["みみ", "じ", "みみー", "じじ"],
+      "correct": 0,
+      "level": 1
+    },
+    {
+      "id": 44,
+      "sentence": "{口}で話しました。",
+      "targetKanji": "口",
+      "choices": ["くち", "こう", "くちー", "こうこう"],
+      "correct": 0,
+      "level": 1
+    },
+    {
+      "id": 45,
+      "sentence": "{鼻}で匂いを嗅ぎました。",
+      "targetKanji": "鼻",
+      "choices": ["はな", "び", "はなー", "びび"],
+      "correct": 0,
+      "level": 1
+    },
+    {
+      "id": 46,
+      "sentence": "{車}で出かけました。",
+      "targetKanji": "車",
+      "choices": ["くるま", "しゃ", "くるまー", "しゃしゃ"],
+      "correct": 0,
+      "level": 1
+    },
+    {
+      "id": 47,
+      "sentence": "{食事}をしました。",
+      "targetKanji": "食事",
+      "choices": ["しょくじ", "たべじ", "しょくしょく", "たべごと"],
+      "correct": 0,
+      "level": 2
+    },
+    {
+      "id": 48,
+      "sentence": "{睡眠}をとりました。",
+      "targetKanji": "睡眠",
+      "choices": ["すいみん", "ねむり", "すいすい", "みんみん"],
+      "correct": 0,
+      "level": 2
+    },
+    {
+      "id": 49,
+      "sentence": "{休憩}しました。",
+      "targetKanji": "休憩",
+      "choices": ["きゅうけい", "やすみ", "きゅうきゅう", "けいけい"],
+      "correct": 0,
+      "level": 2
+    },
+    {
+      "id": 50,
+      "sentence": "{散歩}をしました。",
+      "targetKanji": "散歩",
+      "choices": ["さんぽ", "あるき", "さんさん", "ぽぽ"],
+      "correct": 0,
+      "level": 2
+    }
+  ]
+}

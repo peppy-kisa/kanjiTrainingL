@@ -1,0 +1,411 @@
+/* 基本設定 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Hiragino Sans', 'ヒラギノ角ゴ Pro W3', 'メイリオ', Meiryo, sans-serif;
+    background: linear-gradient(135deg, #87CEEB 0%, #98FB98 100%);
+    min-height: 100vh;
+    color: #2F4F4F;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* ページ切り替え */
+.page {
+    display: none;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.page.active {
+    display: block;
+}
+
+/* ヘッダー */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 2.5em;
+    color: #FF6B6B;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2em;
+    color: #4ECDC4;
+    font-weight: bold;
+}
+
+/* メインページ */
+.progress-section {
+    background: rgba(255,255,255,0.9);
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.score-display {
+    text-align: center;
+}
+
+.score-display p {
+    font-size: 1.3em;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.score-display span {
+    color: #FF6B6B;
+    font-size: 1.2em;
+}
+
+/* たまごセクション */
+.egg-section {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.egg {
+    display: inline-block;
+    width: 150px;
+    height: 180px;
+    background: linear-gradient(45deg, #FFE4E1, #FFF8DC);
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.egg:hover {
+    transform: scale(1.05);
+}
+
+.egg-inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 4em;
+}
+
+/* ボタン */
+.button-section {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.primary-button {
+    background: linear-gradient(45deg, #FF6B6B, #FF8E53);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.4em;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+.primary-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+
+.secondary-button {
+    background: linear-gradient(45deg, #4ECDC4, #44A08D);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1.2em;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+    font-weight: bold;
+    margin: 0 10px;
+}
+
+.secondary-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+
+/* ドラゴンギャラリー */
+.dragons-gallery {
+    background: rgba(255,255,255,0.9);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.dragons-gallery h3 {
+    text-align: center;
+    color: #FF6B6B;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+}
+
+.dragons-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    gap: 15px;
+    justify-items: center;
+}
+
+.dragon-thumbnail {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #FFE4E1, #E6E6FA);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5em;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.dragon-thumbnail:hover {
+    transform: scale(1.1);
+}
+
+/* ゲームページ */
+.game-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255,255,255,0.9);
+    padding: 15px 20px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+}
+
+.back-button {
+    background: #4ECDC4;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.progress-info {
+    display: flex;
+    gap: 20px;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+/* 問題セクション */
+.question-section {
+    background: rgba(255,255,255,0.95);
+    border-radius: 20px;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.question-text {
+    font-size: 1.8em;
+    line-height: 1.8;
+    color: #2F4F4F;
+    font-weight: bold;
+}
+
+.highlight-kanji {
+    background: linear-gradient(45deg, #FFE4B5, #FFFF99);
+    padding: 5px 10px;
+    border-radius: 10px;
+    color: #FF6B6B;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* 選択肢 */
+.choices-section {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.choices-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.choice-btn {
+    background: linear-gradient(45deg, #E6E6FA, #F0F8FF);
+    border: 3px solid #4ECDC4;
+    padding: 20px;
+    border-radius: 15px;
+    font-size: 1.4em;
+    font-weight: bold;
+    color: #2F4F4F;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-height: 80px;
+}
+
+.choice-btn:hover {
+    background: linear-gradient(45deg, #FFE4E1, #FFF8DC);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+.choice-btn.correct {
+    background: linear-gradient(45deg, #98FB98, #90EE90);
+    border-color: #32CD32;
+    animation: correctPulse 0.6s ease;
+}
+
+.choice-btn.incorrect {
+    background: linear-gradient(45deg, #FFB6C1, #FFA0B4);
+    border-color: #FF6B6B;
+    animation: incorrectShake 0.6s ease;
+}
+
+.choice-btn:disabled {
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+/* 結果ページ */
+.result-section {
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.result-display {
+    background: rgba(255,255,255,0.95);
+    border-radius: 20px;
+    padding: 40px;
+    margin-bottom: 30px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+.result-score {
+    font-size: 2em;
+    color: #FF6B6B;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.total-score {
+    font-size: 1.4em;
+    color: #4ECDC4;
+    font-weight: bold;
+}
+
+.result-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* エフェクト */
+.effect-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1000;
+}
+
+.effect-message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3em;
+    font-weight: bold;
+    color: #FF6B6B;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    opacity: 0;
+}
+
+.particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+    body {
+        font-size: 16px;
+    }
+    
+    header h1 {
+        font-size: 2em;
+    }
+    
+    .egg {
+        width: 120px;
+        height: 150px;
+    }
+    
+    .egg-inner {
+        font-size: 3em;
+    }
+    
+    .question-text {
+        font-size: 1.5em;
+    }
+    
+    .choice-btn {
+        font-size: 1.2em;
+        padding: 15px;
+        min-height: 70px;
+    }
+    
+    .result-score {
+        font-size: 1.6em;
+    }
+}
+
+@media (max-width: 480px) {
+    .page {
+        padding: 15px;
+    }
+    
+    .choices-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .result-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .game-header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    
+    .progress-info {
+        justify-content: center;
+    }
+}

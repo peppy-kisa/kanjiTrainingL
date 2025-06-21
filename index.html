@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>かんじドラゴン - よみかたマスター</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+    <!-- メインページ -->
+    <div id="main-page" class="page active">
+        <header>
+            <h1>かんじドラゴン</h1>
+            <p>よみかたマスター</p>
+        </header>
+        
+        <main>
+            <div class="progress-section">
+                <div class="score-display">
+                    <p>せいかいすう: <span id="total-score">0</span>もん</p>
+                    <p>つぎのドラゴンまで: <span id="next-dragon">50</span>もん</p>
+                </div>
+            </div>
+            
+            <div class="egg-section">
+                <div id="dragon-egg" class="egg">
+                    <div class="egg-inner">🥚</div>
+                </div>
+            </div>
+            
+            <div class="button-section">
+                <button id="start-game-btn" class="primary-button">がくしゅうをはじめる</button>
+            </div>
+            
+            <div class="dragons-gallery" id="dragons-gallery">
+                <h3>うまれたドラゴンたち</h3>
+                <div class="dragons-grid" id="dragons-grid">
+                    <!-- ドラゴンサムネイルがここに追加される -->
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <!-- 問題画面 -->
+    <div id="game-page" class="page">
+        <header>
+            <div class="game-header">
+                <button id="back-btn" class="back-button">もどる</button>
+                <div class="progress-info">
+                    <span id="question-progress">1/5</span>
+                    <span id="set-score">0もんせいかい</span>
+                </div>
+            </div>
+        </header>
+        
+        <main>
+            <div class="question-section">
+                <div id="question-text" class="question-text">
+                    <!-- 問題文がここに表示される -->
+                </div>
+            </div>
+            
+            <div class="choices-section">
+                <div class="choices-grid">
+                    <button class="choice-btn" data-choice="0"></button>
+                    <button class="choice-btn" data-choice="1"></button>
+                    <button class="choice-btn" data-choice="2"></button>
+                    <button class="choice-btn" data-choice="3"></button>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <!-- 結果画面 -->
+    <div id="result-page" class="page">
+        <header>
+            <h2>けっか</h2>
+        </header>
+        
+        <main>
+            <div class="result-section">
+                <div class="result-display">
+                    <p class="result-score">5もんちゅう <span id="result-score-num">0</span>もんせいかい！</p>
+                    <p class="total-score">ぜんぶで <span id="result-total-score">0</span>もんせいかい</p>
+                </div>
+                
+                <div class="result-buttons">
+                    <button id="continue-btn" class="primary-button">つづける</button>
+                    <button id="home-btn" class="secondary-button">ホームにもどる</button>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <!-- エフェクト表示用 -->
+    <div id="effect-overlay" class="effect-overlay">
+        <div id="effect-message" class="effect-message"></div>
+        <div id="particles" class="particles"></div>
+    </div>
+    
+    <script src="js/storage.js"></script>
+    <script src="js/character.js"></script>
+    <script src="js/game.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
