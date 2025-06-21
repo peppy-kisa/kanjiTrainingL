@@ -2,7 +2,7 @@
   "questions": [
     {
       "id": 1,
-      "sentence": "{今日|きょう}は{学校}に{行|い}きます。",
+      "sentence": "{今日|きょう}は{学校}に{行|い}きます",
       "targetKanji": "学校",
       "choices": ["がっこう", "がくこう", "まなびや", "けんがく"],
       "correct": 0,
@@ -10,7 +10,7 @@
     },
     {
       "id": 2,
-      "sentence": "お{母|かあ}さんと{買い物}をしました。",
+      "sentence": "お{母|かあ}さんと{買い物}をしました",
       "targetKanji": "買い物",
       "choices": ["かいもの", "かいぶつ", "ばいもの", "こうもの"],
       "correct": 0,
@@ -18,7 +18,7 @@
     },
     {
       "id": 3,
-      "sentence": "{友達}と{遊|あそ}びました。",
+      "sentence": "{友達}と{遊|あそ}びました",
       "targetKanji": "友達",
       "choices": ["ともだち", "ゆうたつ", "ともたち", "とものたち"],
       "correct": 0,
@@ -26,7 +26,7 @@
     },
     {
       "id": 4,
-      "sentence": "{先生}がお{話|はなし}をしました。",
+      "sentence": "{先生}がお{話|はなし}をしました",
       "targetKanji": "先生",
       "choices": ["せんせい", "せんじょう", "さきなま", "せんなま"],
       "correct": 0,
@@ -34,7 +34,7 @@
     },
     {
       "id": 5,
-      "sentence": "{図書館|としょかん}で{本}を{読|よ}みました。",
+      "sentence": "{図書館|としょかん}で{本}を{読|よ}みました",
       "targetKanji": "本",
       "choices": ["ほん", "もと", "ぼん", "ほうん"],
       "correct": 0,
@@ -42,7 +42,7 @@
     },
     {
       "id": 6,
-      "sentence": "{家族}で{旅行|りょこう}に{行|い}きました。",
+      "sentence": "{家族}で{旅行|りょこう}に{行|い}きました",
       "targetKanji": "家族",
       "choices": ["かぞく", "いえぞく", "けぞく", "かそく"],
       "correct": 0,
@@ -50,7 +50,7 @@
     },
     {
       "id": 7,
-      "sentence": "{時間}がありません。",
+      "sentence": "{時間}がありません",
       "targetKanji": "時間",
       "choices": ["じかん", "ときま", "じま", "しかん"],
       "correct": 0,
@@ -58,7 +58,7 @@
     },
     {
       "id": 8,
-      "sentence": "{公園|こうえん}で{犬}を{見|み}ました。",
+      "sentence": "{公園|こうえん}で{犬}を{見|み}ました",
       "targetKanji": "犬",
       "choices": ["いぬ", "けん", "いの", "こん"],
       "correct": 0,
@@ -66,7 +66,7 @@
     },
     {
       "id": 9,
-      "sentence": "{今日}は{晴|は}れています。",
+      "sentence": "{今日}は{晴|は}れています",
       "targetKanji": "今日",
       "choices": ["きょう", "こんにち", "いまひ", "きのう"],
       "correct": 0,
@@ -74,7 +74,7 @@
     },
     {
       "id": 10,
-      "sentence": "{水}を{飲|の}みました。",
+      "sentence": "{水}を{飲|の}みました",
       "targetKanji": "水",
       "choices": ["みず", "すい", "みづ", "しみず"],
       "correct": 0,
@@ -82,7 +82,7 @@
     },
     {
       "id": 11,
-      "sentence": "{電車}で{駅|えき}に{向|む}かいます。",
+      "sentence": "{電車}で{駅|えき}に{向|む}かいます",
       "targetKanji": "電車",
       "choices": ["でんしゃ", "でんくるま", "でんしゃー", "でんち"],
       "correct": 0,
@@ -90,7 +90,7 @@
     },
     {
       "id": 12,
-      "sentence": "{病院}で{診察|しんさつ}を{受|う}けました。",
+      "sentence": "{病院}にいく",
       "targetKanji": "病院",
       "choices": ["びょういん", "びゅういん", "へいいん", "やまいいん"],
       "correct": 0,
@@ -98,7 +98,7 @@
     },
     {
       "id": 13,
-      "sentence": "{会社}で{働|はたら}いています。",
+      "sentence": "{会社}ではたらく",
       "targetKanji": "会社",
       "choices": ["かいしゃ", "あいしゃ", "えしゃ", "かいじゃ"],
       "correct": 0,
@@ -106,7 +106,7 @@
     },
     {
       "id": 14,
-      "sentence": "{写真}を{撮|と}りました。",
+      "sentence": "{写真}をとる",
       "targetKanji": "写真",
       "choices": ["しゃしん", "しゃじん", "うつしん", "しゃそう"],
       "correct": 0,
@@ -114,7 +114,7 @@
     },
     {
       "id": 15,
-      "sentence": "{料理}を{作|つく}りました。",
+      "sentence": "{料理}を{作|つく}りました",
       "targetKanji": "料理",
       "choices": ["りょうり", "ろうり", "りょうじ", "りようり"],
       "correct": 0,
@@ -122,7 +122,7 @@
     },
     {
       "id": 16,
-      "sentence": "{天気}が{良|よ}いです。",
+      "sentence": "{天気}が{良|よ}いです",
       "targetKanji": "天気",
       "choices": ["てんき", "あまき", "てんけ", "てんしき"],
       "correct": 0,
@@ -130,7 +130,7 @@
     },
     {
       "id": 17,
-      "sentence": "{音楽}を{聞|き}きました。",
+      "sentence": "{音楽}を{聞|き}きました",
       "targetKanji": "音楽",
       "choices": ["おんがく", "おとがく", "いんがく", "おんらく"],
       "correct": 0,
@@ -138,7 +138,7 @@
     },
     {
       "id": 18,
-      "sentence": "{新聞}を{読|よ}みました。",
+      "sentence": "{新聞}を{読|よ}みました",
       "targetKanji": "新聞",
       "choices": ["しんぶん", "しんもん", "あたらしぶん", "しんふん"],
       "correct": 0,
@@ -146,7 +146,7 @@
     },
     {
       "id": 19,
-      "sentence": "{野菜}を{食|た}べました。",
+      "sentence": "{野菜}を{食|た}べました",
       "targetKanji": "野菜",
       "choices": ["やさい", "のさい", "やちゃい", "のちゃい"],
       "correct": 0,
@@ -154,7 +154,7 @@
     },
     {
       "id": 20,
-      "sentence": "{自転車}で{行|い}きました。",
+      "sentence": "{自転車}で{行|い}きました",
       "targetKanji": "自転車",
       "choices": ["じてんしゃ", "じでんしゃ", "しでんしゃ", "じてんくるま"],
       "correct": 0,
@@ -162,7 +162,7 @@
     },
     {
       "id": 21,
-      "sentence": "{映画}を{見|み}に{行|い}きました。",
+      "sentence": "{映画}を{見|み}に{行|い}きました",
       "targetKanji": "映画",
       "choices": ["えいが", "えが", "えいかく", "はえが"],
       "correct": 0,
@@ -170,7 +170,7 @@
     },
     {
       "id": 22,
-      "sentence": "{勉強}をしました。",
+      "sentence": "{勉強}をしました",
       "targetKanji": "勉強",
       "choices": ["べんきょう", "べんごう", "べんけう", "べんこう"],
       "correct": 0,
@@ -178,7 +178,7 @@
     },
     {
       "id": 23,
-      "sentence": "{手紙}を{書|か}きました。",
+      "sentence": "{手紙}を{書|か}きました",
       "targetKanji": "手紙",
       "choices": ["てがみ", "てし", "しゅし", "てかみ"],
       "correct": 0,
@@ -186,7 +186,7 @@
     },
     {
       "id": 24,
-      "sentence": "{運動}をしました。",
+      "sentence": "{運動}をしました",
       "targetKanji": "運動",
       "choices": ["うんどう", "うんとう", "はこどう", "うんどく"],
       "correct": 0,
@@ -194,7 +194,7 @@
     },
     {
       "id": 25,
-      "sentence": "{建物}が{高|たか}いです。",
+      "sentence": "{建物}が{高|たか}いです",
       "targetKanji": "建物",
       "choices": ["たてもの", "けんもの", "たてぶつ", "けんぶつ"],
       "correct": 0,
@@ -202,7 +202,7 @@
     },
     {
       "id": 26,
-      "sentence": "{春}になりました。",
+      "sentence": "{春}になりました",
       "targetKanji": "春",
       "choices": ["はる", "しゅん", "はるる", "しゅんじ"],
       "correct": 0,
@@ -210,7 +210,7 @@
     },
     {
       "id": 27,
-      "sentence": "{夏}は{暑|あつ}いです。",
+      "sentence": "{夏}は{暑|あつ}いです",
       "targetKanji": "夏",
       "choices": ["なつ", "か", "げ", "あつ"],
       "correct": 0,
@@ -218,7 +218,7 @@
     },
     {
       "id": 28,
-      "sentence": "{秋}は{涼|すず}しいです。",
+      "sentence": "{秋}は{涼|すず}しいです",
       "targetKanji": "秋",
       "choices": ["あき", "しゅう", "あく", "しう"],
       "correct": 0,
@@ -226,7 +226,7 @@
     },
     {
       "id": 29,
-      "sentence": "{冬}は{寒|さむ}いです。",
+      "sentence": "{冬}は{寒|さむ}いです",
       "targetKanji": "冬",
       "choices": ["ふゆ", "とう", "ふうゆ", "とうき"],
       "correct": 0,
@@ -234,7 +234,7 @@
     },
     {
       "id": 30,
-      "sentence": "{空}が{青|あお}いです。",
+      "sentence": "{空}が{青|あお}いです",
       "targetKanji": "空",
       "choices": ["そら", "くう", "から", "そう"],
       "correct": 0,
@@ -242,7 +242,7 @@
     },
     {
       "id": 31,
-      "sentence": "{花}がきれいです。",
+      "sentence": "{花}がきれいです",
       "targetKanji": "花",
       "choices": ["はな", "か", "ばな", "はなー"],
       "correct": 0,
@@ -250,7 +250,7 @@
     },
     {
       "id": 32,
-      "sentence": "{山}に{登|のぼ}りました。",
+      "sentence": "{山}に{登|のぼ}りました",
       "targetKanji": "山",
       "choices": ["やま", "さん", "やまー", "さんざん"],
       "correct": 0,
@@ -258,7 +258,7 @@
     },
     {
       "id": 33,
-      "sentence": "{海}で{泳|およ}ぎました。",
+      "sentence": "{海}で{泳|およ}ぎました",
       "targetKanji": "海",
       "choices": ["うみ", "かい", "うみー", "かいじ"],
       "correct": 0,
@@ -266,7 +266,7 @@
     },
     {
       "id": 34,
-      "sentence": "{川}で{魚|さかな}を{見|み}ました。",
+      "sentence": "{川}で{魚|さかな}を{見|み}ました",
       "targetKanji": "川",
       "choices": ["かわ", "がわ", "せん", "かわー"],
       "correct": 0,
@@ -274,7 +274,7 @@
     },
     {
       "id": 35,
-      "sentence": "{火}が{燃|も}えています。",
+      "sentence": "{火}がもえています",
       "targetKanji": "火",
       "choices": ["ひ", "か", "び", "ふぁ"],
       "correct": 0,
@@ -282,7 +282,7 @@
     },
     {
       "id": 36,
-      "sentence": "{力}を{合|あ}わせました。",
+      "sentence": "{力}を{合|あ}わせました",
       "targetKanji": "力",
       "choices": ["ちから", "りょく", "りき", "ちからー"],
       "correct": 0,
@@ -290,7 +290,7 @@
     },
     {
       "id": 37,
-      "sentence": "{心}が{温|あたた}かいです。",
+      "sentence": "{心}が{温|あたた}かいです",
       "targetKanji": "心",
       "choices": ["こころ", "しん", "こころー", "しんしん"],
       "correct": 0,
@@ -298,7 +298,7 @@
     },
     {
       "id": 38,
-      "sentence": "{体}が{元気|げんき}です。",
+      "sentence": "{体}が{元気|げんき}です",
       "targetKanji": "体",
       "choices": ["からだ", "たい", "からだー", "たいたい"],
       "correct": 0,
@@ -306,7 +306,7 @@
     },
     {
       "id": 39,
-      "sentence": "{頭}が{痛|いた}いです。",
+      "sentence": "{頭}が{痛|いた}いです",
       "targetKanji": "頭",
       "choices": ["あたま", "とう", "あたまー", "とうとう"],
       "correct": 0,
@@ -314,7 +314,7 @@
     },
     {
       "id": 40,
-      "sentence": "{手}を{洗|あら}いました。",
+      "sentence": "{手}を{洗|あら}いました",
       "targetKanji": "手",
       "choices": ["て", "しゅ", "てー", "しゅしゅ"],
       "correct": 0,
@@ -322,7 +322,7 @@
     },
     {
       "id": 41,
-      "sentence": "{足}が{疲|つか}れました。",
+      "sentence": "{足}が{疲|つか}れました",
       "targetKanji": "足",
       "choices": ["あし", "そく", "あしー", "そくそく"],
       "correct": 0,
@@ -330,7 +330,7 @@
     },
     {
       "id": 42,
-      "sentence": "{目}で{見|み}ました。",
+      "sentence": "{目}がいたい",
       "targetKanji": "目",
       "choices": ["め", "もく", "めー", "もくもく"],
       "correct": 0,
@@ -338,7 +338,7 @@
     },
     {
       "id": 43,
-      "sentence": "{耳}で{聞|き}きました。",
+      "sentence": "{耳}がかゆい",
       "targetKanji": "耳",
       "choices": ["みみ", "じ", "みみー", "じじ"],
       "correct": 0,
@@ -346,7 +346,7 @@
     },
     {
       "id": 44,
-      "sentence": "{口}で{話|はな}しました。",
+      "sentence": "{口}をゆすぐ",
       "targetKanji": "口",
       "choices": ["くち", "こう", "くちー", "こうこう"],
       "correct": 0,
@@ -354,7 +354,7 @@
     },
     {
       "id": 45,
-      "sentence": "{鼻}で{匂|にお}いを{嗅|か}ぎました。",
+      "sentence": "{鼻}で{匂|にお}いをかいだ",
       "targetKanji": "鼻",
       "choices": ["はな", "び", "はなー", "びび"],
       "correct": 0,
@@ -362,7 +362,7 @@
     },
     {
       "id": 46,
-      "sentence": "{車}で{出|で}かけました。",
+      "sentence": "{車}で{出|で}かけました",
       "targetKanji": "車",
       "choices": ["くるま", "しゃ", "くるまー", "しゃしゃ"],
       "correct": 0,
@@ -370,7 +370,7 @@
     },
     {
       "id": 47,
-      "sentence": "{食事}をしました。",
+      "sentence": "{食事}をしました",
       "targetKanji": "食事",
       "choices": ["しょくじ", "たべじ", "しょくしょく", "たべごと"],
       "correct": 0,
@@ -378,7 +378,7 @@
     },
     {
       "id": 48,
-      "sentence": "{睡眠}をとりました。",
+      "sentence": "{睡眠}をとりました",
       "targetKanji": "睡眠",
       "choices": ["すいみん", "ねむり", "すいすい", "みんみん"],
       "correct": 0,
@@ -386,19 +386,467 @@
     },
     {
       "id": 49,
-      "sentence": "{休憩}しました。",
-      "targetKanji": "休憩",
-      "choices": ["きゅうけい", "やすみ", "きゅうきゅう", "けいけい"],
+      "sentence": "{休}みました",
+      "targetKanji": "休",
+      "choices": ["やす", "きゅう", "けい", "たい"],
       "correct": 0,
       "level": 2
     },
     {
       "id": 50,
-      "sentence": "{散歩}をしました。",
-      "targetKanji": "散歩",
-      "choices": ["さんぽ", "あるき", "さんさん", "ぽぽ"],
+      "sentence": "{歩}く",
+      "targetKanji": "歩",
+      "choices": ["ある", "あるき", "か", "はる"],
       "correct": 0,
       "level": 2
+    },
+    {
+      "id": 51,
+      "sentence": "{文|ぶん}を{読}む",
+      "targetKanji": "読",
+      "choices": ["よ", "か", "どく", "や"],
+      "correct": 0,
+      "level": 1
+    },
+    {
+      "id": 52,
+      "sentence": "{雪}が{降|ふ}る",
+      "targetKanji": "雪",
+      "choices": ["ゆき", "せつ", "しも", "こおり"],
+      "correct": 0,
+      "level": 1
+    },
+    {
+      "id": 53,
+      "sentence": "{声}を{出|だ}す",
+      "targetKanji": "声",
+      "choices": ["こえ", "せい", "おと", "ね"],
+      "correct": 0,
+      "level": 1
+    },
+    {
+      "id": 54,
+      "sentence": "{先生|せんせい}に{言}う",
+      "targetKanji": "言",
+      "choices": ["い", "げん", "ごん", "こと"],
+      "correct": 0,
+      "level": 1
+    },
+    {
+      "id": 55,
+      "sentence": "{山}へ{行|い}く",
+      "targetKanji": "山",
+      "choices": ["やま", "さん", "たか", "みね"],
+      "correct": 0,
+      "level": 1
+    },
+    {
+      "id": 56,
+      "sentence": "{南}の{国|くに}",
+      "targetKanji": "南",
+      "choices": ["みなみ", "なん", "きた", "ひがし"],
+      "correct": 0,
+      "level": 2
+    },
+    {
+      "id": 57,
+      "sentence": "{図書館}",
+      "targetKanji": "図書館",
+      "choices": ["としょかん", "ずしょかん", "としょば", "ずしょば"],
+      "correct": 0,
+      "level": 2
+    },
+    {
+      "id": 58,
+      "sentence": "{教科書}",
+      "targetKanji": "教科書",
+      "choices": ["きょうかしょ", "おしえかしょ", "きょうかしょう", "おしえかじょ"],
+      "correct": 0,
+      "level": 2
+    },
+    {
+      "id": 59,
+      "sentence": "{書|か}き{方}",
+      "targetKanji": "方",
+      "choices": ["かた", "ほう", "がた", "ぽう"],
+      "correct": 0,
+      "level": 1
+    },
+    {
+      "id": 60,
+      "sentence": "{絵}の{具|ぐ}",
+      "targetKanji": "絵",
+      "choices": ["え", "が", "かい", "えい"],
+      "correct": 0,
+      "level": 1
+    },
+    {
+      "id": 61,
+      "sentence": "{知}り{合|あ}い",
+      "targetKanji": "知",
+      "choices": ["し", "ち", "とも", "しり"],
+      "correct": 0,
+      "level": 2
+    },
+    {
+      "id": 62,
+      "sentence": "{春}の{花|はな}",
+      "targetKanji": "春",
+      "choices": ["はる", "しゅん", "あき", "なつ"],
+      "correct": 0,
+      "level": 1
+    },
+    {
+      "id": 63,
+      "sentence": "{思}い{出|だ}す",
+      "targetKanji": "思",
+      "choices": ["おも", "し", "こころ", "かんが"],
+      "correct": 0,
+      "level": 2
+    },
+    {
+      "id": 64,
+      "sentence": "{記号}",
+      "targetKanji": "記号",
+      "choices": ["きごう", "きこう", "しるしごう", "おぼえごう"],
+      "correct": 0,
+      "level": 2
+    },
+    {
+      "id": 65,
+      "sentence": "{土曜日}",
+      "targetKanji": "土曜日",
+      "choices": ["どようび", "つちようび", "どよび", "つちよび"],
+      "correct": 0,
+      "level": 2
+    },
+    {
+      "id": 66,
+      "sentence": "{焼}き{肉|にく}",
+      "targetKanji": "焼",
+      "choices": ["や", "しょう", "もや", "あぶ"],
+      "correct": 0,
+      "level": 2
+    },
+    {
+      "id": 67,
+      "sentence": "{話}をする",
+      "targetKanji": "話",
+      "choices": ["はなし", "わ", "だん", "かた"],
+      "correct": 0,
+      "level": 1
+    },
+    {
+      "id": 68,
+      "sentence": "{人|ひと}から{聞}く",
+      "targetKanji": "聞",
+      "choices": ["き", "か", "たた", "ぶん"],
+      "correct": 0,
+      "level": 1
+    },
+    {
+      "id": 69,
+      "sentence": "{黄色}",
+      "targetKanji": "黄色",
+      "choices": ["きいろ", "おうしき", "こうしょく", "きしょく"],
+      "correct": 0,
+      "level": 2
+    },
+    {
+      "id": 70,
+      "sentence": "{色}えんぴつ",
+      "targetKanji": "色",
+      "choices": ["いろ", "しき", "しょく", "いろ"],
+      "correct": 0,
+      "level": 1
+    },
+    {
+      "id": 71,
+      "sentence": "{黒}い{犬|いぬ}",
+      "targetKanji": "黒",
+      "choices": ["くろ", "こく", "しろ", "あか"],
+      "correct": 0,
+      "level": 1
+    },
+    {
+      "id": 72,
+      "sentence": "{太}った{犬|いぬ}",
+      "targetKanji": "太",
+      "choices": ["ふと", "た", "だい", "おお"],
+      "correct": 0,
+      "level": 1
+    },
+    {
+      "id": 73,
+      "sentence": "かみの{毛}",
+      "targetKanji": "毛",
+      "choices": ["かみ", "はつ", "け", "もう"],
+      "correct": 0,
+      "level": 2
+    },
+    {
+      "id": 74,
+      "sentence": "{高}い{木|き}",
+      "targetKanji": "高",
+      "choices": ["たか", "こう", "ひく", "のぼ"],
+      "correct": 0,
+      "level": 1
+    },
+    {
+      "id": 75,
+      "sentence": "{つめたい{風}",
+      "targetKanji": "風",
+      "choices": ["かぜ", "ふう", "みず", "おかし"],
+      "correct": 0,
+      "level": 2
+    },
+    {
+      "id": 76,
+      "sentence": "{晴}れた{空|そら}",
+      "targetKanji": "晴",
+      "choices": ["は", "せい", "あき", "てん"],
+      "correct": 0,
+      "level": 1
+    },
+    {
+      "id": 77,
+      "sentence": "{数}が{多|おお}い",
+      "targetKanji": "数",
+      "choices": ["かず", "すう", "すく", "おお"],
+      "correct": 0,
+      "level": 2
+    },
+    {
+      "id": 78,
+      "sentence": "{新}しい{服|ふく}",
+      "targetKanji": "新",
+      "choices": ["あたら", "しん", "ふる", "にい"],
+      "correct": 0,
+      "level": 1
+    },
+    {
+      "id": 79,
+      "sentence": "{考}え{事|ごと}",
+      "targetKanji": "考",
+      "choices": ["かんが", "こう", "おも", "しらべ"],
+      "correct": 0,
+      "level": 2
+    },
+    {
+      "id": 80,
+      "sentence": "{同|おな}じかたち",
+      "targetKanji": "同",
+      "choices": ["おな", "どう", "とう", "ちが"],
+      "correct": 0,
+      "level": 2
+    },
+    {
+      "id": 81,
+      "sentence": "{体}をのばす",
+      "targetKanji": "体",
+      "choices": ["からだ", "たい", "あし", "だい"],
+      "correct": 0,
+      "level": 2
+    },
+    {
+      "id": 82,
+      "sentence": "{長}い{話|はなし}",
+      "targetKanji": "長",
+      "choices": ["なが", "ちょう", "みじか", "たか"],
+      "correct": 0,
+      "level": 1
+    },
+    {
+      "id": 83,
+      "sentence": "{校長}{先生|せんせい}",
+      "targetKanji": "校長",
+      "choices": ["こうちょう", "がくちょう", "こうなが", "がくなが"],
+      "correct": 0,
+      "level": 2
+    },
+    {
+      "id": 84,
+      "sentence": "{川|かわ}の{近}く",
+      "targetKanji": "近",
+      "choices": ["ちか", "きん", "とお", "そば"],
+      "correct": 0,
+      "level": 2
+    },
+    {
+      "id": 85,
+      "sentence": "{同}じ{本|ほん}",
+      "targetKanji": "同",
+      "choices": ["おな", "どう", "とう", "ちが"],
+      "correct": 0,
+      "level": 2
+    },
+    {
+      "id": 86,
+      "sentence": "{今}から{行|い}く",
+      "targetKanji": "今",
+      "choices": ["いま", "こん", "きん", "いの"],
+      "correct": 0,
+      "level": 1
+    },
+    {
+      "id": 87,
+      "sentence": "{音楽会}",
+      "targetKanji": "音楽会",
+      "choices": ["おんがくかい", "おとがくかい", "おんがっかい", "いんがくかい"],
+      "correct": 0,
+      "level": 2
+    },
+    {
+      "id": 88,
+      "sentence": "{社会}",
+      "targetKanji": "社会",
+      "choices": ["しゃかい", "しゃあ", "やしろかい", "しゃえ"],
+      "correct": 0,
+      "level": 2
+    },
+    {
+      "id": 89,
+      "sentence": "{刀}をさす",
+      "targetKanji": "刀",
+      "choices": ["かたな", "とう", "やいば", "けん"],
+      "correct": 0,
+      "level": 2
+    },
+    {
+      "id": 90,
+      "sentence": "よく{切|き}れる",
+      "targetKanji": "切",
+      "choices": ["き", "せつ", "だん", "た"],
+      "correct": 0,
+      "level": 1
+    },
+    {
+      "id": 91,
+      "sentence": "{案内}する",
+      "targetKanji": "案内",
+      "choices": ["あんない", "あんうち", "しょうかい", "あんじ"],
+      "correct": 0,
+      "level": 2
+    },
+    {
+      "id": 92,
+      "sentence": "{小|ちい}さな{店}",
+      "targetKanji": "店",
+      "choices": ["みせ", "てん", "いえ", "やま"],
+      "correct": 0,
+      "level": 1
+    },
+    {
+      "id": 93,
+      "sentence": "{姉}の{学校|がっこう}",
+      "targetKanji": "姉",
+      "choices": ["あね", "し", "いもうと", "ねえ"],
+      "correct": 0,
+      "level": 1
+    },
+    {
+      "id": 94,
+      "sentence": "{妹}と{遊|あそ}ぶ",
+      "targetKanji": "妹",
+      "choices": ["いもうと", "まい", "あね", "し"],
+      "correct": 0,
+      "level": 1
+    },
+    {
+      "id": 95,
+      "sentence": "{線路}",
+      "targetKanji": "線路",
+      "choices": ["せんろ", "せんみち", "でんろ", "せんじ"],
+      "correct": 0,
+      "level": 2
+    },
+    {
+      "id": 96,
+      "sentence": "{汽車}に{乗|の}る",
+      "targetKanji": "汽車",
+      "choices": ["きしゃ", "でんしゃ", "じょうしゃ", "きくるま"],
+      "correct": 0,
+      "level": 2
+    },
+    {
+      "id": 97,
+      "sentence": "{青|あお}い{海}",
+      "targetKanji": "海",
+      "choices": ["うみ", "みず", "かわ", "みずうみ"],
+      "correct": 0,
+      "level": 1
+    },
+    {
+      "id": 98,
+      "sentence": "{魚}の{骨|ほね}",
+      "targetKanji": "魚",
+      "choices": ["さかな", "ぎょ", "うお", "ざかな"],
+      "correct": 0,
+      "level": 1
+    },
+    {
+      "id": 99,
+      "sentence": "{白}い{空|そら}",
+      "targetKanji": "白",
+      "choices": ["しろ", "はく", "しら", "くろ"],
+      "correct": 0,
+      "level": 1
+    },
+    {
+      "id": 100,
+      "sentence": "{前|まえ}とうしろ",
+      "targetKanji": "前",
+      "choices": ["まえ", "ぜん", "さき", "あと"],
+      "correct": 0,
+      "level": 1
+    },
+    {
+      "id": 101,
+      "sentence": "{元気}に{遊|あそ}ぶ",
+      "targetKanji": "元気",
+      "choices": ["げんき", "もとき", "げんけ", "もときき"],
+      "correct": 0,
+      "level": 1
+    },
+    {
+      "id": 102,
+      "sentence": "{大|おお}きな{岩}",
+      "targetKanji": "岩",
+      "choices": ["いわ", "あわ", "いし", "やま"],
+      "correct": 0,
+      "level": 1
+    },
+    {
+      "id": 103,
+      "sentence": "たくさん{食}べる",
+      "targetKanji": "食",
+      "choices": ["た", "しょく", "じき", "く"],
+      "correct": 0,
+      "level": 1
+    },
+    {
+      "id": 104,
+      "sentence": "{字|じ}を{教}える",
+      "targetKanji": "字",
+      "choices": ["おし", "きょう", "か", "き"],
+      "correct": 0,
+      "level": 1
+    },
+    {
+      "id": 105,
+      "sentence": "{明}るい{光|ひかり}",
+      "targetKanji": "明",
+      "choices": ["あか", "めい", "みょう", "くら"],
+      "correct": 0,
+      "level": 1
+    },
+    {
+      "id": 106,
+      "sentence": "{白|しろ}い{家}",
+      "targetKanji": "家",
+      "choices": ["いえ", "か", "け", "うち"],
+      "correct": 0,
+      "level": 1
     }
   ]
 }
