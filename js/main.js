@@ -47,6 +47,18 @@ class App {
         document.getElementById('dragon-egg').addEventListener('click', () => {
             this.animateEgg();
         });
+        
+        // モーダル関連
+        document.getElementById('modal-close').addEventListener('click', () => {
+            this.closeDragonModal();
+        });
+        
+        // モーダル外クリックで閉じる
+        document.getElementById('dragon-modal').addEventListener('click', (e) => {
+            if (e.target.id === 'dragon-modal') {
+                this.closeDragonModal();
+            }
+        });
     }
     
     // メインページを更新
@@ -71,8 +83,27 @@ class App {
             egg.classList.remove('animate-heartbeat');
         }
         
+        // プログレスバーを更新
+        this.updateProgressBar(eggState.progress);
+        
         // ドラゴンギャラリーを更新
         this.updateDragonGallery();
+    }
+    
+    // プログレスバーを更新
+    updateProgressBar(progress) {
+        const progressFill = document.getElementById('progress-fill');
+        const progressText = document.getElementById('progress-text');
+        
+        progressFill.style.width = progress + '%';
+        progressText.textContent = Math.round(progress) + '%';
+        
+        // 進捗に応じてアニメーション
+        if (progress >= 100) {
+            progressFill.classList.add('rainbow-text');
+        } else {
+            progressFill.classList.remove('rainbow-text');
+        }
     }
     
     // ドラゴンギャラリーを更新
@@ -110,8 +141,22 @@ class App {
         const dragon = characterManager.getDragonDetails(dragonId);
         if (!dragon) return;
         
-        const message = `${dragon.displayName}\n\n誕生日: ${dragon.unlockDate}\n幸福度: ${dragon.happiness}%`;
-        alert(message);
+        // モーダルに情報を設定
+        document.getElementById('modal-dragon-avatar').textContent = dragon.emoji;
+        document.getElementById('modal-dragon-avatar').style.color = dragon.color;
+        document.getElementById('modal-dragon-name').textContent = dragon.name;
+        document.getElementById('modal-dragon-birth').textContent = dragon.unlockDate;
+        document.getElementById('modal-dragon-happiness').textContent = dragon.happiness;
+        document.getElementById('modal-dragon-days').textContent = dragon.daysOwned;
+        document.getElementById('modal-dragon-message').textContent = dragon.personalMessage;
+        
+        // モーダルを表示
+        document.getElementById('dragon-modal').style.display = 'block';
+    }
+    
+    // ドラゴンモーダルを閉じる
+    closeDragonModal() {
+        document.getElementById('dragon-modal').style.display = 'none';
     }
     
     // ゲーム開始
@@ -300,11 +345,73 @@ class App {
     showDragonBirthEffect(newDragons) {
         newDragons.forEach((dragon, index) => {
             setTimeout(() => {
+                // 特別な誕生エフェクト
+                this.createDragonBirthAnimation(dragon);
+                
                 const message = `🎉 ${dragon.name}がうまれました！ 🎉`;
                 this.showEffect(message, 'birth');
-                this.createParticles();
-            }, index * 1000);
+                this.createCelebrationParticles();
+                
+                // 誕生後にメインページを更新
+                setTimeout(() => {
+                    this.updateMainPage();
+                }, 2000);
+            }, index * 1500);
         });
+    }
+    
+    // ドラゴン誕生アニメーション
+    createDragonBirthAnimation(dragon) {
+        const birthContainer = document.createElement('div');
+        birthContainer.className = 'dragon-birth-container';
+        birthContainer.style.cssText = `
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 3000;
+            font-size: 8em;
+            animation: dragonBirth 3s ease-out forwards;
+        `;
+        birthContainer.textContent = dragon.emoji;
+        
+        document.body.appendChild(birthContainer);
+        
+        // 3秒後に削除
+        setTimeout(() => {
+            if (birthContainer.parentNode) {
+                birthContainer.parentNode.removeChild(birthContainer);
+            }
+        }, 3000);
+    }
+    
+    // お祝いパーティクル
+    createCelebrationParticles() {
+        const particlesContainer = document.getElementById('particles');
+        const emojis = ['🎊', '🎉', '✨', '🌟', '💖', '🎈', '🌈'];
+        
+        for (let i = 0; i < 30; i++) {
+            const particle = document.createElement('div');
+            particle.className = 'celebration-particle';
+            particle.style.cssText = `
+                position: absolute;
+                left: ${Math.random() * 100}%;
+                top: ${Math.random() * 100}%;
+                font-size: ${Math.random() * 2 + 1}em;
+                animation: celebrationFloat ${Math.random() * 2 + 3}s ease-out forwards;
+                animation-delay: ${Math.random() * 0.5}s;
+            `;
+            particle.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+            
+            particlesContainer.appendChild(particle);
+            
+            // アニメーション終了後に削除
+            setTimeout(() => {
+                if (particle.parentNode) {
+                    particle.parentNode.removeChild(particle);
+                }
+            }, 5000);
+        }
     }
     
     // たまごアニメーション

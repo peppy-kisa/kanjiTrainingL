@@ -68,6 +68,62 @@ header p {
     font-size: 1.2em;
 }
 
+/* プログレスバー */
+.progress-bar-container {
+    margin-top: 20px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 25px;
+    background: linear-gradient(90deg, #E6E6FA, #F0F8FF);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #FFD93D, #FF6B6B, #4ECDC4);
+    border-radius: 15px;
+    width: 0%;
+    transition: width 1s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+.progress-fill::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        rgba(255,255,255,0.4) 50%, 
+        transparent 100%);
+    animation: progressShine 2s ease-in-out infinite;
+}
+
+@keyframes progressShine {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+.progress-text {
+    text-align: center;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #4ECDC4;
+    font-size: 1.1em;
+}
+
 /* たまごセクション */
 .egg-section {
     text-align: center;
@@ -317,6 +373,111 @@ header p {
     justify-content: center;
     gap: 20px;
     flex-wrap: wrap;
+}
+
+/* ドラゴンモーダル */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    animation: fadeIn 0.3s ease;
+}
+
+.modal-content {
+    background: linear-gradient(135deg, #FFE4E1, #F0F8FF);
+    margin: 10% auto;
+    padding: 0;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    position: relative;
+    animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.close {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #999;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.close:hover {
+    color: #FF6B6B;
+}
+
+.dragon-details {
+    text-align: center;
+    padding: 30px;
+}
+
+.dragon-avatar {
+    font-size: 5em;
+    margin-bottom: 20px;
+    animation: dragonFloat 3s ease-in-out infinite;
+}
+
+@keyframes dragonFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.dragon-details h3 {
+    color: #FF6B6B;
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.dragon-stats {
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.dragon-stats p {
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+
+.dragon-stats strong {
+    color: #4ECDC4;
+}
+
+.dragon-message {
+    background: linear-gradient(45deg, #98FB98, #90EE90);
+    border-radius: 15px;
+    padding: 15px;
+    font-size: 1.2em;
+    color: #2F4F4F;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* エフェクト */

@@ -147,13 +147,85 @@ class CharacterManager {
         if (!dragon) return null;
         
         const dragonType = this.dragonTypes.find(d => d.id === dragonId);
+        const daysOwned = Math.floor((Date.now() - new Date(dragon.unlockDate).getTime()) / (1000 * 60 * 60 * 24));
         
         return {
             ...dragon,
             type: dragonType,
             unlockDate: new Date(dragon.unlockDate).toLocaleDateString('ja-JP'),
-            daysOwned: Math.floor((Date.now() - new Date(dragon.unlockDate).getTime()) / (1000 * 60 * 60 * 24))
+            daysOwned: daysOwned,
+            personalMessage: this.getDragonPersonalMessage(dragonType, dragon.happiness, daysOwned)
         };
+    }
+    
+    // ドラゴンの個性的なメッセージを取得
+    getDragonPersonalMessage(dragonType, happiness, daysOwned) {
+        const messages = {
+            1: [ // ひりゅう
+                'こんにちは！きょうもがんばろうね！',
+                'きみといっしょだとたのしいよ！',
+                'かんじのべんきょう、がんばってるね！'
+            ],
+            2: [ // みずりゅう
+                'みずのようにきれいなこころをもってるね！',
+                'ながれるみずのように、まえにすすもう！',
+                'みずはやさしく、つよい。きみもそうだよ！'
+            ],
+            3: [ // かりゅう
+                'あつい きもちで がんばろう！',
+                'ほのおのように、やるきをもやそう！',
+                'きみのじょうねつが、ぼくをげんきにするよ！'
+            ],
+            4: [ // でんりゅう
+                'でんきのようにすばやく かんがえよう！',
+                'きらめく ひらめきを だいじにしてね！',
+                'きみの のうりょくは でんこうせっか だね！'
+            ],
+            5: [ // こおりりゅう
+                'つめたくても、こころは あたたかいよ！',
+                'しずかに、おちついて かんがえよう！',
+                'こおりのように とうめいな きもちでいこう！'
+            ],
+            6: [ // きんりゅう
+                'きんきらきんの みらいが まってるよ！',
+                'たからものよりも だいじなのは、きみのえがお！',
+                'おうごんに かがやく きぼうを もとう！'
+            ],
+            7: [ // やみりゅう
+                'やみの なかでも、ひかりを みつけよう！',
+                'しずかな よるは、かんがえるのに ぴったりだね！',
+                'ほしあかりのように、やさしく てらそう！'
+            ],
+            8: [ // ひかりりゅう
+                'ひかりのように、みんなを てらそう！',
+                'あかるい きもちが いちばん だいじ！',
+                'きみの えがおが、せかいを あかるくするよ！'
+            ],
+            9: [ // じりゅう
+                'だいちのように、しっかりと たとう！',
+                'つちの なかから、あたらしい いのちが うまれるよ！',
+                'やまのように たくましく、かわのように やさしく！'
+            ],
+            10: [ // てんりゅう
+                'そらたかく とんで、ゆめを つかもう！',
+                'にじのように、いろんな いろを たいせつに！',
+                'てんごくのような ここちよさを、みんなに あげよう！'
+            ]
+        };
+        
+        const dragonMessages = messages[dragonType.id] || messages[1];
+        let messageIndex = 0;
+        
+        // 幸福度と日数に応じてメッセージを選択
+        if (happiness >= 80) {
+            messageIndex = 0; // 元気なメッセージ
+        } else if (happiness >= 50) {
+            messageIndex = 1; // 普通のメッセージ
+        } else {
+            messageIndex = 2; // 励ましのメッセージ
+        }
+        
+        return dragonMessages[messageIndex % dragonMessages.length];
     }
     
     // ドラゴンの幸福度を更新

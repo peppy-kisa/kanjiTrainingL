@@ -21,6 +21,12 @@
                     <p>せいかいすう: <span id="total-score">0</span>もん</p>
                     <p>つぎのドラゴンまで: <span id="next-dragon">50</span>もん</p>
                 </div>
+                <div class="progress-bar-container">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progress-fill"></div>
+                    </div>
+                    <p class="progress-text" id="progress-text">0%</p>
+                </div>
             </div>
             
             <div class="egg-section">
@@ -93,6 +99,25 @@
         </main>
     </div>
     
+    <!-- ドラゴン詳細モーダル -->
+    <div id="dragon-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="modal-close">&times;</span>
+            <div class="dragon-details">
+                <div class="dragon-avatar" id="modal-dragon-avatar">🐉</div>
+                <h3 id="modal-dragon-name">ドラゴンの名前</h3>
+                <div class="dragon-stats">
+                    <p><strong>たんじょうび:</strong> <span id="modal-dragon-birth"></span></p>
+                    <p><strong>こうふくど:</strong> <span id="modal-dragon-happiness"></span>%</p>
+                    <p><strong>いっしょのひすう:</strong> <span id="modal-dragon-days"></span>にち</p>
+                </div>
+                <div class="dragon-message" id="modal-dragon-message">
+                    こんにちは！いつもがんばってるね！
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- エフェクト表示用 -->
     <div id="effect-overlay" class="effect-overlay">
         <div id="effect-message" class="effect-message"></div>
