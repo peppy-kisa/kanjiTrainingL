@@ -154,12 +154,12 @@ class CharacterManager {
             type: dragonType,
             unlockDate: new Date(dragon.unlockDate).toLocaleDateString('ja-JP'),
             daysOwned: daysOwned,
-            personalMessage: this.getDragonPersonalMessage(dragonType, dragon.happiness, daysOwned)
+            personalMessage: this.getDragonPersonalMessage(dragonType, dragon.happiness)
         };
     }
     
     // ドラゴンの個性的なメッセージを取得
-    getDragonPersonalMessage(dragonType, happiness, daysOwned) {
+    getDragonPersonalMessage(dragonType, happiness) {
         const messages = {
             1: [ // ひりゅう
                 'こんにちは！きょうもがんばろうね！',
