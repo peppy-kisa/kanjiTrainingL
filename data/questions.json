@@ -580,7 +580,7 @@
       "id": 73,
       "sentence": "かみの{毛}",
       "targetKanji": "毛",
-      "choices": ["かみ", "はつ", "け", "もう"],
+      "choices": ["け", "はつ", "も", "もう"],
       "correct": 0,
       "level": 2
     },
@@ -827,7 +827,7 @@
     {
       "id": 104,
       "sentence": "{字|じ}を{教}える",
-      "targetKanji": "字",
+      "targetKanji": "教",
       "choices": ["おし", "きょう", "か", "き"],
       "correct": 0,
       "level": 1
