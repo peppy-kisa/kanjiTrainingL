@@ -101,6 +101,30 @@ class GameManager {
         return formattedText;
     }
     
+    // 選択肢をシャッフル
+    shuffleChoices(choices, correctIndex) {
+        // 選択肢と正解インデックスのペアを作成
+        const choicesWithIndex = choices.map((choice, index) => ({
+            text: choice,
+            isCorrect: index === correctIndex
+        }));
+        
+        // Fisher-Yates シャッフルアルゴリズム
+        for (let i = choicesWithIndex.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [choicesWithIndex[i], choicesWithIndex[j]] = [choicesWithIndex[j], choicesWithIndex[i]];
+        }
+        
+        // シャッフル後の選択肢と新しい正解インデックスを返す
+        const shuffledChoices = choicesWithIndex.map(item => item.text);
+        const newCorrectIndex = choicesWithIndex.findIndex(item => item.isCorrect);
+        
+        return {
+            choices: shuffledChoices,
+            correctIndex: newCorrectIndex
+        };
+    }
+    
     // 問題を表示
     showQuestion() {
         const question = this.getCurrentQuestion();
@@ -108,11 +132,18 @@ class GameManager {
         
         const formattedText = this.formatQuestionText(question.sentence, question.targetKanji);
         
+        // 選択肢をシャッフル
+        const shuffledData = this.shuffleChoices(question.choices, question.correct);
+        
+        // 現在の問題にシャッフル結果を保存（回答処理で使用）
+        this.currentShuffledChoices = shuffledData.choices;
+        this.currentCorrectIndex = shuffledData.correctIndex;
+        
         return {
             questionNumber: this.currentQuestionIndex + 1,
             totalQuestions: this.currentQuestionSet.length,
             formattedText: formattedText,
-            choices: question.choices,
+            choices: shuffledData.choices,
             currentScore: this.currentSetScore
         };
     }
@@ -124,7 +155,7 @@ class GameManager {
         const question = this.getCurrentQuestion();
         if (!question) return null;
         
-        const isCorrect = choiceIndex === question.correct;
+        const isCorrect = choiceIndex === this.currentCorrectIndex;
         this.selectedAnswer = choiceIndex;
         
         // 回答を記録
@@ -141,8 +172,8 @@ class GameManager {
         
         return {
             isCorrect: isCorrect,
-            correctAnswer: question.correct,
-            correctText: question.choices[question.correct],
+            correctAnswer: this.currentCorrectIndex,
+            correctText: this.currentShuffledChoices[this.currentCorrectIndex],
             selectedAnswer: choiceIndex,
             currentScore: this.currentSetScore,
             questionNumber: this.currentQuestionIndex + 1,
@@ -156,8 +187,8 @@ class GameManager {
         this.selectedAnswer = null;
         
         if (this.currentQuestionIndex >= this.currentQuestionSet.length) {
-            // ゲーム終了
-            return this.endGame();
+            // ゲーム終了を示すためnullを返す（endGame()は呼び出し側で実行）
+            return null;
         }
         
         return this.showQuestion();
