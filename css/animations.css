@@ -32,11 +32,15 @@
         opacity: 0;
         transform: translate(-50%, -50%) scale(0.5);
     }
-    30% {
+    15% {
         opacity: 1;
-        transform: translate(-50%, -50%) scale(1.2);
+        transform: translate(-50%, -50%) scale(1.1);
     }
-    70% {
+    25% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+    85% {
         opacity: 1;
         transform: translate(-50%, -50%) scale(1);
     }
@@ -157,7 +161,7 @@
 }
 
 .show-message {
-    animation: messageEffect 2s ease-out forwards;
+    animation: messageEffect 4.5s ease-out forwards;
 }
 
 /* パーティクル要素 */
